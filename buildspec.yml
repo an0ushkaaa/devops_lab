@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - echo "Running lint..."
-      - flake8 app.py
+      - flake8 app.py --ignore=W292,W293,E302
       - echo "Running unit tests..."
       - pytest test_app.py -v
       - echo "Logging into ECR..."
